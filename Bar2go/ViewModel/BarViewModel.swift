@@ -326,7 +326,7 @@ class BarViewModel: ObservableObject {
     
     func editarBarConImagen(bar: BarModel, imagen: Data, completion: @escaping (Bool) -> Void){
         let storageImage = Storage.storage().reference(forURL: bar.dirImagen)
-        storageImage.delete(completion: nil)
+        storageImage.delete(completion: nil) 
         
         let storage = Storage.storage().reference()
         let nombrePortada = UUID()
