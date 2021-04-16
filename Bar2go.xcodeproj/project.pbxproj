@@ -1,0 +1,932 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32CF091760AC247A9A975E87 /* Pods_Bar2go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13453549465C6BD65D1FFCC7 /* Pods_Bar2go.framework */; };
+		8C171FFE260D0961006887B3 /* ReservaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C171FFD260D0961006887B3 /* ReservaModel.swift */; };
+		8C172003260D0C54006887B3 /* ReservasUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C172002260D0C54006887B3 /* ReservasUsuario.swift */; };
+		8C18C791261F63080056840E /* Inicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18C790261F63080056840E /* Inicio.swift */; };
+		8C2FF1AD261B782E00E90BED /* SpeechViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FF1AC261B782E00E90BED /* SpeechViewModel.swift */; };
+		8C37FBB32623055C0092DA5F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C37FBB22623055C0092DA5F /* ImagePicker.swift */; };
+		8C37FBBE2623117F0092DA5F /* ImagenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C37FBBD2623117F0092DA5F /* ImagenViewModel.swift */; };
+		8C37FBCB262312390092DA5F /* ImagenStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C37FBCA262312390092DA5F /* ImagenStorageView.swift */; };
+		8C49E2B0260A66AD00A140B2 /* ListaBares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C49E2AF260A66AD00A140B2 /* ListaBares.swift */; };
+		8C7471D526076C4F00C0C6DF /* TipoBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7471D426076C4F00C0C6DF /* TipoBarStyle.swift */; };
+		8C7471E02607AEE000C0C6DF /* FormularioBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7471DF2607AEE000C0C6DF /* FormularioBar.swift */; };
+		8C7471E82607B8C200C0C6DF /* AgregarUbicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7471E72607B8C200C0C6DF /* AgregarUbicacion.swift */; };
+		8C7471ED2607B8D200C0C6DF /* EstadoBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7471EC2607B8D200C0C6DF /* EstadoBar.swift */; };
+		8C7471F72607C15E00C0C6DF /* MostrarUbicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7471F62607C15E00C0C6DF /* MostrarUbicacion.swift */; };
+		8C80DF9B2621C9C2008EBE67 /* BuscadorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80DF9A2621C9C2008EBE67 /* BuscadorBar.swift */; };
+		8C80DFA02621CCA4008EBE67 /* TiposPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80DF9F2621CCA4008EBE67 /* TiposPickerView.swift */; };
+		8C80DFA526220650008EBE67 /* CardBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80DFA426220650008EBE67 /* CardBar.swift */; };
+		8C80DFB0262211A8008EBE67 /* LanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80DFAF262211A8008EBE67 /* LanguagePickerView.swift */; };
+		8CA7B5EA2620C49300F6D7A6 /* ReservaCardBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA7B5E92620C49300F6D7A6 /* ReservaCardBar.swift */; };
+		8CA7B5EF2620C89300F6D7A6 /* ListaReservas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA7B5EE2620C89300F6D7A6 /* ListaReservas.swift */; };
+		8CBD58B02603615D00842B85 /* TipoBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD58AF2603615D00842B85 /* TipoBar.swift */; };
+		8CBD58B5260364AA00842B85 /* BarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD58B4260364AA00842B85 /* BarViewModel.swift */; };
+		8CBD58BD260364E500842B85 /* BarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD58BC260364E500842B85 /* BarModel.swift */; };
+		8CD942A0260CB48B00054936 /* BaresUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9429F260CB48B00054936 /* BaresUsuario.swift */; };
+		8CDAD279260B5DAC0036BB5E /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDAD278260B5DAC0036BB5E /* UserLocation.swift */; };
+		8CDD87EC260BA11A00F6FE6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CDD87EB260BA11A00F6FE6E /* GoogleService-Info.plist */; };
+		8CF5A0F42602643800BF405D /* Bar2goApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5A0F32602643800BF405D /* Bar2goApp.swift */; };
+		8CF5A0F62602643800BF405D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5A0F52602643800BF405D /* ContentView.swift */; };
+		8CF5A0F82602643900BF405D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF5A0F72602643900BF405D /* Assets.xcassets */; };
+		8CF5A0FB2602643900BF405D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF5A0FA2602643900BF405D /* Preview Assets.xcassets */; };
+		8CF5A1062602643900BF405D /* Bar2goTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5A1052602643900BF405D /* Bar2goTests.swift */; };
+		8CF5A1112602643900BF405D /* Bar2goUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5A1102602643900BF405D /* Bar2goUITests.swift */; };
+		8CF5A12826027AEF00BF405D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5A12726027AEF00BF405D /* Home.swift */; };
+		8CF5A13026027B2100BF405D /* MyNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5A12F26027B2100BF405D /* MyNavigationBar.swift */; };
+		8CF5A135260287BF00BF405D /* BusquedaNombre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5A134260287BF00BF405D /* BusquedaNombre.swift */; };
+		8CF5A13A26028A4900BF405D /* BusquedaTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5A13926028A4900BF405D /* BusquedaTipo.swift */; };
+		8CF5A13F26028A5A00BF405D /* BusquedaCercania.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5A13E26028A5A00BF405D /* BusquedaCercania.swift */; };
+		8CF7B49C260BA60E00BA3A3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF7B49B260BA60E00BA3A3A /* AppDelegate.swift */; };
+		8CF7B4A1260BA86D00BA3A3A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF7B4A0260BA86D00BA3A3A /* LoginView.swift */; };
+		B469C2BFF4B4B1076895FAB8 /* Pods_Bar2go_Bar2goUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2B429635E7FACBB7D45974 /* Pods_Bar2go_Bar2goUITests.framework */; };
+		FCEE8955D3FA9806A8E96F18 /* Pods_Bar2goTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3082ECC3A0E4B81319DCC0FC /* Pods_Bar2goTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CF5A1022602643900BF405D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CF5A0E82602643800BF405D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CF5A0EF2602643800BF405D;
+			remoteInfo = Bar2go;
+		};
+		8CF5A10D2602643900BF405D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CF5A0E82602643800BF405D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CF5A0EF2602643800BF405D;
+			remoteInfo = Bar2go;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		090903D692D42615DB2005BE /* Pods-Bar2go-Bar2goUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bar2go-Bar2goUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bar2go-Bar2goUITests/Pods-Bar2go-Bar2goUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		13453549465C6BD65D1FFCC7 /* Pods_Bar2go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bar2go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3082ECC3A0E4B81319DCC0FC /* Pods_Bar2goTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bar2goTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B171AB264E759D882123E5E /* Pods-Bar2go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bar2go.debug.xcconfig"; path = "Target Support Files/Pods-Bar2go/Pods-Bar2go.debug.xcconfig"; sourceTree = "<group>"; };
+		8B57D473F75C1A4DA034ADAA /* Pods-Bar2goTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bar2goTests.release.xcconfig"; path = "Target Support Files/Pods-Bar2goTests/Pods-Bar2goTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C171FFD260D0961006887B3 /* ReservaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaModel.swift; sourceTree = "<group>"; };
+		8C172002260D0C54006887B3 /* ReservasUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservasUsuario.swift; sourceTree = "<group>"; };
+		8C18C790261F63080056840E /* Inicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inicio.swift; sourceTree = "<group>"; };
+		8C2FF1AC261B782E00E90BED /* SpeechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewModel.swift; sourceTree = "<group>"; };
+		8C37FBB22623055C0092DA5F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		8C37FBBD2623117F0092DA5F /* ImagenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewModel.swift; sourceTree = "<group>"; };
+		8C37FBCA262312390092DA5F /* ImagenStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenStorageView.swift; sourceTree = "<group>"; };
+		8C49E2AF260A66AD00A140B2 /* ListaBares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaBares.swift; sourceTree = "<group>"; };
+		8C7471D426076C4F00C0C6DF /* TipoBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoBarStyle.swift; sourceTree = "<group>"; };
+		8C7471DF2607AEE000C0C6DF /* FormularioBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioBar.swift; sourceTree = "<group>"; };
+		8C7471E72607B8C200C0C6DF /* AgregarUbicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarUbicacion.swift; sourceTree = "<group>"; };
+		8C7471EC2607B8D200C0C6DF /* EstadoBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoBar.swift; sourceTree = "<group>"; };
+		8C7471F62607C15E00C0C6DF /* MostrarUbicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostrarUbicacion.swift; sourceTree = "<group>"; };
+		8C80DF9A2621C9C2008EBE67 /* BuscadorBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscadorBar.swift; sourceTree = "<group>"; };
+		8C80DF9F2621CCA4008EBE67 /* TiposPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiposPickerView.swift; sourceTree = "<group>"; };
+		8C80DFA426220650008EBE67 /* CardBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBar.swift; sourceTree = "<group>"; };
+		8C80DFAF262211A8008EBE67 /* LanguagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerView.swift; sourceTree = "<group>"; };
+		8CA7B5E92620C49300F6D7A6 /* ReservaCardBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaCardBar.swift; sourceTree = "<group>"; };
+		8CA7B5EE2620C89300F6D7A6 /* ListaReservas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReservas.swift; sourceTree = "<group>"; };
+		8CBD58AF2603615D00842B85 /* TipoBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoBar.swift; sourceTree = "<group>"; };
+		8CBD58B4260364AA00842B85 /* BarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarViewModel.swift; sourceTree = "<group>"; };
+		8CBD58BC260364E500842B85 /* BarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarModel.swift; sourceTree = "<group>"; };
+		8CD9429F260CB48B00054936 /* BaresUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaresUsuario.swift; sourceTree = "<group>"; };
+		8CDAD278260B5DAC0036BB5E /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		8CDD87EB260BA11A00F6FE6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CF5A0F02602643800BF405D /* Bar2go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bar2go.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF5A0F32602643800BF405D /* Bar2goApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar2goApp.swift; sourceTree = "<group>"; };
+		8CF5A0F52602643800BF405D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8CF5A0F72602643900BF405D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CF5A0FA2602643900BF405D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8CF5A0FC2602643900BF405D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF5A1012602643900BF405D /* Bar2goTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bar2goTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF5A1052602643900BF405D /* Bar2goTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar2goTests.swift; sourceTree = "<group>"; };
+		8CF5A1072602643900BF405D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF5A10C2602643900BF405D /* Bar2goUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bar2goUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF5A1102602643900BF405D /* Bar2goUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar2goUITests.swift; sourceTree = "<group>"; };
+		8CF5A1122602643900BF405D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF5A12726027AEF00BF405D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		8CF5A12F26027B2100BF405D /* MyNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationBar.swift; sourceTree = "<group>"; };
+		8CF5A134260287BF00BF405D /* BusquedaNombre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusquedaNombre.swift; sourceTree = "<group>"; };
+		8CF5A13926028A4900BF405D /* BusquedaTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusquedaTipo.swift; sourceTree = "<group>"; };
+		8CF5A13E26028A5A00BF405D /* BusquedaCercania.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusquedaCercania.swift; sourceTree = "<group>"; };
+		8CF7B49B260BA60E00BA3A3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CF7B4A0260BA86D00BA3A3A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A88D3E830E9E89814ECD2D4F /* Pods-Bar2go-Bar2goUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bar2go-Bar2goUITests.release.xcconfig"; path = "Target Support Files/Pods-Bar2go-Bar2goUITests/Pods-Bar2go-Bar2goUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ABE96CBA49FBE861278A069F /* Pods-Bar2goTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bar2goTests.debug.xcconfig"; path = "Target Support Files/Pods-Bar2goTests/Pods-Bar2goTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D8AE645E7EFA78CB9F6D19F0 /* Pods-Bar2go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bar2go.release.xcconfig"; path = "Target Support Files/Pods-Bar2go/Pods-Bar2go.release.xcconfig"; sourceTree = "<group>"; };
+		DD2B429635E7FACBB7D45974 /* Pods_Bar2go_Bar2goUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bar2go_Bar2goUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CF5A0ED2602643800BF405D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CF091760AC247A9A975E87 /* Pods_Bar2go.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF5A0FE2602643900BF405D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCEE8955D3FA9806A8E96F18 /* Pods_Bar2goTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF5A1092602643900BF405D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B469C2BFF4B4B1076895FAB8 /* Pods_Bar2go_Bar2goUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20661E82F13FDD0C94F7609C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B171AB264E759D882123E5E /* Pods-Bar2go.debug.xcconfig */,
+				D8AE645E7EFA78CB9F6D19F0 /* Pods-Bar2go.release.xcconfig */,
+				090903D692D42615DB2005BE /* Pods-Bar2go-Bar2goUITests.debug.xcconfig */,
+				A88D3E830E9E89814ECD2D4F /* Pods-Bar2go-Bar2goUITests.release.xcconfig */,
+				ABE96CBA49FBE861278A069F /* Pods-Bar2goTests.debug.xcconfig */,
+				8B57D473F75C1A4DA034ADAA /* Pods-Bar2goTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7AD18C74A1B15954DCD7BCF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13453549465C6BD65D1FFCC7 /* Pods_Bar2go.framework */,
+				DD2B429635E7FACBB7D45974 /* Pods_Bar2go_Bar2goUITests.framework */,
+				3082ECC3A0E4B81319DCC0FC /* Pods_Bar2goTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CD07E12262348D60090ED8B /* Elementos */ = {
+			isa = PBXGroup;
+			children = (
+				8CF5A12F26027B2100BF405D /* MyNavigationBar.swift */,
+				8C80DF9A2621C9C2008EBE67 /* BuscadorBar.swift */,
+				8C80DF9F2621CCA4008EBE67 /* TiposPickerView.swift */,
+				8C80DFAF262211A8008EBE67 /* LanguagePickerView.swift */,
+				8C37FBCA262312390092DA5F /* ImagenStorageView.swift */,
+			);
+			path = Elementos;
+			sourceTree = "<group>";
+		};
+		8CD07E162623492A0090ED8B /* Principales */ = {
+			isa = PBXGroup;
+			children = (
+				8C18C790261F63080056840E /* Inicio.swift */,
+				8CF5A12726027AEF00BF405D /* Home.swift */,
+				8CF7B4A0260BA86D00BA3A3A /* LoginView.swift */,
+				8CF5A0F52602643800BF405D /* ContentView.swift */,
+			);
+			path = Principales;
+			sourceTree = "<group>";
+		};
+		8CDAD272260B59E50036BB5E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8C7471F62607C15E00C0C6DF /* MostrarUbicacion.swift */,
+				8C7471E72607B8C200C0C6DF /* AgregarUbicacion.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		8CDAD273260B5A0C0036BB5E /* Busquedas */ = {
+			isa = PBXGroup;
+			children = (
+				8CF5A134260287BF00BF405D /* BusquedaNombre.swift */,
+				8CF5A13926028A4900BF405D /* BusquedaTipo.swift */,
+				8CF5A13E26028A5A00BF405D /* BusquedaCercania.swift */,
+				8CD9429F260CB48B00054936 /* BaresUsuario.swift */,
+				8C172002260D0C54006887B3 /* ReservasUsuario.swift */,
+			);
+			path = Busquedas;
+			sourceTree = "<group>";
+		};
+		8CDAD274260B5A230036BB5E /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				8C80DFA426220650008EBE67 /* CardBar.swift */,
+				8C7471D426076C4F00C0C6DF /* TipoBarStyle.swift */,
+				8C7471DF2607AEE000C0C6DF /* FormularioBar.swift */,
+				8C49E2AF260A66AD00A140B2 /* ListaBares.swift */,
+				8C7471EC2607B8D200C0C6DF /* EstadoBar.swift */,
+				8CA7B5E92620C49300F6D7A6 /* ReservaCardBar.swift */,
+				8CA7B5EE2620C89300F6D7A6 /* ListaReservas.swift */,
+			);
+			path = Bar;
+			sourceTree = "<group>";
+		};
+		8CF5A0E72602643800BF405D = {
+			isa = PBXGroup;
+			children = (
+				8CF5A0F22602643800BF405D /* Bar2go */,
+				8CF5A1042602643900BF405D /* Bar2goTests */,
+				8CF5A10F2602643900BF405D /* Bar2goUITests */,
+				8CF5A0F12602643800BF405D /* Products */,
+				20661E82F13FDD0C94F7609C /* Pods */,
+				7AD18C74A1B15954DCD7BCF3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8CF5A0F12602643800BF405D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CF5A0F02602643800BF405D /* Bar2go.app */,
+				8CF5A1012602643900BF405D /* Bar2goTests.xctest */,
+				8CF5A10C2602643900BF405D /* Bar2goUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CF5A0F22602643800BF405D /* Bar2go */ = {
+			isa = PBXGroup;
+			children = (
+				8CF5A12626027AD900BF405D /* Model */,
+				8CF5A12526027ACC00BF405D /* ViewModel */,
+				8CF5A12426027AC200BF405D /* View */,
+				8CF5A0F32602643800BF405D /* Bar2goApp.swift */,
+				8CDD87EB260BA11A00F6FE6E /* GoogleService-Info.plist */,
+				8CF7B49B260BA60E00BA3A3A /* AppDelegate.swift */,
+				8CF5A0F72602643900BF405D /* Assets.xcassets */,
+				8CF5A0FC2602643900BF405D /* Info.plist */,
+				8CF5A0F92602643900BF405D /* Preview Content */,
+			);
+			path = Bar2go;
+			sourceTree = "<group>";
+		};
+		8CF5A0F92602643900BF405D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8CF5A0FA2602643900BF405D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8CF5A1042602643900BF405D /* Bar2goTests */ = {
+			isa = PBXGroup;
+			children = (
+				8CF5A1052602643900BF405D /* Bar2goTests.swift */,
+				8CF5A1072602643900BF405D /* Info.plist */,
+			);
+			path = Bar2goTests;
+			sourceTree = "<group>";
+		};
+		8CF5A10F2602643900BF405D /* Bar2goUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8CF5A1102602643900BF405D /* Bar2goUITests.swift */,
+				8CF5A1122602643900BF405D /* Info.plist */,
+			);
+			path = Bar2goUITests;
+			sourceTree = "<group>";
+		};
+		8CF5A12426027AC200BF405D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CD07E162623492A0090ED8B /* Principales */,
+				8CD07E12262348D60090ED8B /* Elementos */,
+				8CDAD274260B5A230036BB5E /* Bar */,
+				8CDAD273260B5A0C0036BB5E /* Busquedas */,
+				8CDAD272260B59E50036BB5E /* Map */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CF5A12526027ACC00BF405D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8CBD58B4260364AA00842B85 /* BarViewModel.swift */,
+				8C2FF1AC261B782E00E90BED /* SpeechViewModel.swift */,
+				8C37FBBD2623117F0092DA5F /* ImagenViewModel.swift */,
+				8CDAD278260B5DAC0036BB5E /* UserLocation.swift */,
+				8C37FBB22623055C0092DA5F /* ImagePicker.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8CF5A12626027AD900BF405D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CBD58AF2603615D00842B85 /* TipoBar.swift */,
+				8CBD58BC260364E500842B85 /* BarModel.swift */,
+				8C171FFD260D0961006887B3 /* ReservaModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CF5A0EF2602643800BF405D /* Bar2go */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CF5A1152602643900BF405D /* Build configuration list for PBXNativeTarget "Bar2go" */;
+			buildPhases = (
+				A26A258A7B4EAA519D0BCF9E /* [CP] Check Pods Manifest.lock */,
+				8CF5A0EC2602643800BF405D /* Sources */,
+				8CF5A0ED2602643800BF405D /* Frameworks */,
+				8CF5A0EE2602643800BF405D /* Resources */,
+				74657F96E9A6991F7BEC8589 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bar2go;
+			productName = Bar2go;
+			productReference = 8CF5A0F02602643800BF405D /* Bar2go.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8CF5A1002602643900BF405D /* Bar2goTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CF5A1182602643900BF405D /* Build configuration list for PBXNativeTarget "Bar2goTests" */;
+			buildPhases = (
+				8AF1BA6EB9067D2C5610B4EC /* [CP] Check Pods Manifest.lock */,
+				8CF5A0FD2602643900BF405D /* Sources */,
+				8CF5A0FE2602643900BF405D /* Frameworks */,
+				8CF5A0FF2602643900BF405D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CF5A1032602643900BF405D /* PBXTargetDependency */,
+			);
+			name = Bar2goTests;
+			productName = Bar2goTests;
+			productReference = 8CF5A1012602643900BF405D /* Bar2goTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8CF5A10B2602643900BF405D /* Bar2goUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CF5A11B2602643900BF405D /* Build configuration list for PBXNativeTarget "Bar2goUITests" */;
+			buildPhases = (
+				7B3D97C08655FFB235ABBF2B /* [CP] Check Pods Manifest.lock */,
+				8CF5A1082602643900BF405D /* Sources */,
+				8CF5A1092602643900BF405D /* Frameworks */,
+				8CF5A10A2602643900BF405D /* Resources */,
+				1382718D40812EEB458DED69 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CF5A10E2602643900BF405D /* PBXTargetDependency */,
+			);
+			name = Bar2goUITests;
+			productName = Bar2goUITests;
+			productReference = 8CF5A10C2602643900BF405D /* Bar2goUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CF5A0E82602643800BF405D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					8CF5A0EF2602643800BF405D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					8CF5A1002602643900BF405D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 8CF5A0EF2602643800BF405D;
+					};
+					8CF5A10B2602643900BF405D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 8CF5A0EF2602643800BF405D;
+					};
+				};
+			};
+			buildConfigurationList = 8CF5A0EB2602643800BF405D /* Build configuration list for PBXProject "Bar2go" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = 8CF5A0E72602643800BF405D;
+			productRefGroup = 8CF5A0F12602643800BF405D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CF5A0EF2602643800BF405D /* Bar2go */,
+				8CF5A1002602643900BF405D /* Bar2goTests */,
+				8CF5A10B2602643900BF405D /* Bar2goUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CF5A0EE2602643800BF405D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF5A0FB2602643900BF405D /* Preview Assets.xcassets in Resources */,
+				8CF5A0F82602643900BF405D /* Assets.xcassets in Resources */,
+				8CDD87EC260BA11A00F6FE6E /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF5A0FF2602643900BF405D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF5A10A2602643900BF405D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1382718D40812EEB458DED69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bar2go-Bar2goUITests/Pods-Bar2go-Bar2goUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bar2go-Bar2goUITests/Pods-Bar2go-Bar2goUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bar2go-Bar2goUITests/Pods-Bar2go-Bar2goUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74657F96E9A6991F7BEC8589 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bar2go/Pods-Bar2go-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bar2go/Pods-Bar2go-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bar2go/Pods-Bar2go-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B3D97C08655FFB235ABBF2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bar2go-Bar2goUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AF1BA6EB9067D2C5610B4EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bar2goTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A26A258A7B4EAA519D0BCF9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bar2go-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CF5A0EC2602643800BF405D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C7471F72607C15E00C0C6DF /* MostrarUbicacion.swift in Sources */,
+				8CA7B5EA2620C49300F6D7A6 /* ReservaCardBar.swift in Sources */,
+				8CF5A0F62602643800BF405D /* ContentView.swift in Sources */,
+				8C37FBCB262312390092DA5F /* ImagenStorageView.swift in Sources */,
+				8C37FBB32623055C0092DA5F /* ImagePicker.swift in Sources */,
+				8C18C791261F63080056840E /* Inicio.swift in Sources */,
+				8C7471E82607B8C200C0C6DF /* AgregarUbicacion.swift in Sources */,
+				8C2FF1AD261B782E00E90BED /* SpeechViewModel.swift in Sources */,
+				8C7471ED2607B8D200C0C6DF /* EstadoBar.swift in Sources */,
+				8C80DFA02621CCA4008EBE67 /* TiposPickerView.swift in Sources */,
+				8CD942A0260CB48B00054936 /* BaresUsuario.swift in Sources */,
+				8CF5A135260287BF00BF405D /* BusquedaNombre.swift in Sources */,
+				8CA7B5EF2620C89300F6D7A6 /* ListaReservas.swift in Sources */,
+				8CF5A12826027AEF00BF405D /* Home.swift in Sources */,
+				8CF5A13F26028A5A00BF405D /* BusquedaCercania.swift in Sources */,
+				8C80DF9B2621C9C2008EBE67 /* BuscadorBar.swift in Sources */,
+				8CF7B49C260BA60E00BA3A3A /* AppDelegate.swift in Sources */,
+				8C80DFB0262211A8008EBE67 /* LanguagePickerView.swift in Sources */,
+				8CDAD279260B5DAC0036BB5E /* UserLocation.swift in Sources */,
+				8C172003260D0C54006887B3 /* ReservasUsuario.swift in Sources */,
+				8CF5A0F42602643800BF405D /* Bar2goApp.swift in Sources */,
+				8CF5A13026027B2100BF405D /* MyNavigationBar.swift in Sources */,
+				8C7471E02607AEE000C0C6DF /* FormularioBar.swift in Sources */,
+				8CBD58BD260364E500842B85 /* BarModel.swift in Sources */,
+				8C7471D526076C4F00C0C6DF /* TipoBarStyle.swift in Sources */,
+				8C80DFA526220650008EBE67 /* CardBar.swift in Sources */,
+				8CF7B4A1260BA86D00BA3A3A /* LoginView.swift in Sources */,
+				8CF5A13A26028A4900BF405D /* BusquedaTipo.swift in Sources */,
+				8C37FBBE2623117F0092DA5F /* ImagenViewModel.swift in Sources */,
+				8C171FFE260D0961006887B3 /* ReservaModel.swift in Sources */,
+				8CBD58B5260364AA00842B85 /* BarViewModel.swift in Sources */,
+				8C49E2B0260A66AD00A140B2 /* ListaBares.swift in Sources */,
+				8CBD58B02603615D00842B85 /* TipoBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF5A0FD2602643900BF405D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF5A1062602643900BF405D /* Bar2goTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF5A1082602643900BF405D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF5A1112602643900BF405D /* Bar2goUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CF5A1032602643900BF405D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CF5A0EF2602643800BF405D /* Bar2go */;
+			targetProxy = 8CF5A1022602643900BF405D /* PBXContainerItemProxy */;
+		};
+		8CF5A10E2602643900BF405D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CF5A0EF2602643800BF405D /* Bar2go */;
+			targetProxy = 8CF5A10D2602643900BF405D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8CF5A1132602643900BF405D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8CF5A1142602643900BF405D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CF5A1162602643900BF405D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B171AB264E759D882123E5E /* Pods-Bar2go.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Bar2go/Preview Content\"";
+				DEVELOPMENT_TEAM = GUPP7N586R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Bar2go/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = joseegc10.Bar2go;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8CF5A1172602643900BF405D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8AE645E7EFA78CB9F6D19F0 /* Pods-Bar2go.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Bar2go/Preview Content\"";
+				DEVELOPMENT_TEAM = GUPP7N586R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Bar2go/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = joseegc10.Bar2go;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8CF5A1192602643900BF405D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABE96CBA49FBE861278A069F /* Pods-Bar2goTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUPP7N586R;
+				INFOPLIST_FILE = Bar2goTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = joseegc10.Bar2goTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bar2go.app/Bar2go";
+			};
+			name = Debug;
+		};
+		8CF5A11A2602643900BF405D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B57D473F75C1A4DA034ADAA /* Pods-Bar2goTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUPP7N586R;
+				INFOPLIST_FILE = Bar2goTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = joseegc10.Bar2goTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bar2go.app/Bar2go";
+			};
+			name = Release;
+		};
+		8CF5A11C2602643900BF405D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090903D692D42615DB2005BE /* Pods-Bar2go-Bar2goUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUPP7N586R;
+				INFOPLIST_FILE = Bar2goUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = joseegc10.Bar2goUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bar2go;
+			};
+			name = Debug;
+		};
+		8CF5A11D2602643900BF405D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A88D3E830E9E89814ECD2D4F /* Pods-Bar2go-Bar2goUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUPP7N586R;
+				INFOPLIST_FILE = Bar2goUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = joseegc10.Bar2goUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bar2go;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CF5A0EB2602643800BF405D /* Build configuration list for PBXProject "Bar2go" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF5A1132602643900BF405D /* Debug */,
+				8CF5A1142602643900BF405D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CF5A1152602643900BF405D /* Build configuration list for PBXNativeTarget "Bar2go" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF5A1162602643900BF405D /* Debug */,
+				8CF5A1172602643900BF405D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CF5A1182602643900BF405D /* Build configuration list for PBXNativeTarget "Bar2goTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF5A1192602643900BF405D /* Debug */,
+				8CF5A11A2602643900BF405D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CF5A11B2602643900BF405D /* Build configuration list for PBXNativeTarget "Bar2goUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF5A11C2602643900BF405D /* Debug */,
+				8CF5A11D2602643900BF405D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CF5A0E82602643800BF405D /* Project object */;
+}
