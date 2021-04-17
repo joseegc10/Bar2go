@@ -40,7 +40,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         }
         
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            print("Se ha cancelado la seleccion de iamgen")
+            print("Se ha cancelado la seleccion de imagen")
             self.conexion.show.toggle()
         }
         

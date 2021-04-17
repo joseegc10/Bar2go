@@ -47,12 +47,14 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Usar localización</string>
+	<string>Debe permitir la localización para saber la ubicación de un bar</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Usar la cámara</string>
+	<string>Debe permitir el uso de la biblioteca de fotos para seleccionar una foto para el bar</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Debe permitirlo para obtener una descripción en audio de los bares al pulsar en ellos</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Debe permitirlo para obtener una descripción en audio de los bares al pulsar en ellos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Debe permitir el uso de la cámara para poder generar una foto para el bar</string>
 </dict>
 </plist>
