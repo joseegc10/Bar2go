@@ -47,7 +47,7 @@ struct ListaBares: View {
     
     @State var reservas: [String:[Int:Int]] = [:]
     
-    @StateObject var speech = SpeechViewModel()
+    @StateObject var speech: SpeechViewModel
     
     func showLocation(){
         cancelable = userLocation.$locations.sink { (location) in

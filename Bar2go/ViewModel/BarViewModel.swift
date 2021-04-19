@@ -9,6 +9,8 @@ import Foundation
 import Combine
 import Firebase
 
+
+/// Estado: Sirve para saber si el usuario esta logueado o no
 enum Estado: Identifiable {
     case login, logueado
     
@@ -17,6 +19,8 @@ enum Estado: Identifiable {
     }
 }
 
+
+/// Para realizar la reserva en el dia de mañana
 let fechaMañana: String = { () -> String in
     var date = Date()
     date = Calendar.current.date(byAdding: .day, value: 1, to: date)!
@@ -25,11 +29,18 @@ let fechaMañana: String = { () -> String in
     return formatter.string(from: date)
 }()
 
+
+/// Clase para la conexion con la base de datos de firebase (login, bares y reservas)
 class BarViewModel: ObservableObject {
-    @Published var bares = [BarModel]()
-    @Published var reservas = [ReservaModel]()
-    @Published var estado: Estado = .login
+    @Published var bares = [BarModel]()         /// Almacenar los bares según se pidan
+    @Published var reservas = [ReservaModel]()  /// Almacenar las reservas según se pidan
+    @Published var estado: Estado = .login      /// Saber si el usuario se ha logueado
     
+    /// Login en firebase
+    /// - Parameters:
+    ///   - email: email del usuario
+    ///   - password: contraseña del usuario
+    ///   - completion: Para saber si se ha hecho correctamente
     func login(email: String, password: String, completion: @escaping (_ done: Bool) -> Void){
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if user != nil {
@@ -45,6 +56,12 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Registro en la app
+    /// - Parameters:
+    ///   - email: email del usuario
+    ///   - password: contraseña del usuario
+    ///   - completion: Para saber si se ha hecho correctamente
     func register(email: String, password: String, completion: @escaping (_ done: Bool) -> Void){
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if user != nil {
@@ -60,6 +77,12 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Para añadir un bar a la base de datos
+    /// - Parameters:
+    ///   - miBar: bar a añadir
+    ///   - imagen: imagen del bar
+    ///   - completion: saber si se ha añadido correctamente
     func aniadeBar(miBar: BarModel, imagen: Data, completion: @escaping (Bool) -> Void){
         let storage = Storage.storage().reference()
         let nombrePortada = UUID()
@@ -71,12 +94,11 @@ class BarViewModel: ObservableObject {
             if error == nil {
                 print("guardo la imagen")
                 
-                // Guardamos ahora el texto ya que la imagen tarda mas
+                // Guardamos primero la imagen y ahora el texto ya que la imagen tarda mas
                 let db = Firestore.firestore()
                 let id = UUID().uuidString
 
                 guard let idUser = Auth.auth().currentUser?.uid else { return }
-                //guard let emailUser = Auth.auth().currentUser?.email else { return }
 
                 let bar = miBar
 
@@ -99,6 +121,10 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Convertir json en BarModel
+    /// - Parameter document: json de la query
+    /// - Returns: BarModel creado
     func docEnBar(document: QueryDocumentSnapshot) -> BarModel{
         let valor = document.data()
         let id = document.documentID
@@ -119,6 +145,12 @@ class BarViewModel: ObservableObject {
         return bar
     }
     
+    
+    /// Pasar json a BarModel pero con los datos directamente en vez de con la query
+    /// - Parameters:
+    ///   - valor: Datos para generar el BarModel
+    ///   - id: id del bar
+    /// - Returns: BarModel creado
     func docEnBar2(valor: [String:Any], id: String) -> BarModel{
         let nombre = valor["nombre"] as? String ?? ""
         let descripcion = valor["descripcion"] as? String ?? ""
@@ -136,6 +168,8 @@ class BarViewModel: ObservableObject {
         return bar
     }
     
+    
+    /// Obtener todos los bares
     func obtenerBares(){
         let db = Firestore.firestore()
         db.collection("bares").getDocuments { (querySnapshot, err) in
@@ -172,6 +206,7 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    /// Obtener los bares del usuario
     func obtenerBaresUsuario(){
         let db = Firestore.firestore()
         guard let idUser = Auth.auth().currentUser?.uid else { return }
@@ -205,6 +240,8 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Obtener las reservas del usuario
     func obtenerReservasUsuario(){
         let db = Firestore.firestore()
         guard let idUser = Auth.auth().currentUser?.uid else { return }
@@ -240,6 +277,9 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Eliminar la reserva de un bar
+    /// - Parameter reserva: reserva a eliminar
     func eliminarReserva(reserva: ReservaModel){
         let db = Firestore.firestore()
         db.collection("reservas").document(reserva.id).delete()
@@ -262,6 +302,8 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Obtener los bares en los cuales el usuario ha hecho una reserva
     func obtenerBaresConReservasUsuario(){
         let db = Firestore.firestore()
         guard let idUser = Auth.auth().currentUser?.uid else { return }
@@ -301,6 +343,12 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Eliminar un bar
+    /// - Parameters:
+    ///   - id: id del bar a eliminar
+    ///   - imageURL: dirección de la imagen del bar a eliminar
+    ///   - completion: para saber si se ha hecho correctamente
     func eliminarBar(id: String, imageURL: String, completion: @escaping (Bool) -> Void){
         let db = Firestore.firestore()
         db.collection("bares").document(id).delete()
@@ -310,6 +358,11 @@ class BarViewModel: ObservableObject {
         completion(true)
     }
     
+    
+    /// Editar la información de un bar
+    /// - Parameters:
+    ///   - bar: Bar con la nueva información
+    ///   - completion: para saber si se ha hecho bien
     func editarBar(bar: BarModel, completion: @escaping (Bool) -> Void){
         let db = Firestore.firestore()
         let campos: [String:Any] = ["nombre":bar.nombre, "descripcion":bar.descripcion,
@@ -324,6 +377,12 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Para editar un bar y su imagen
+    /// - Parameters:
+    ///   - bar: Bar con la nueva información
+    ///   - imagen: nueva imagen
+    ///   - completion: para saber si se ha hecho bien
     func editarBarConImagen(bar: BarModel, imagen: Data, completion: @escaping (Bool) -> Void){
         let storageImage = Storage.storage().reference(forURL: bar.dirImagen)
         storageImage.delete(completion: nil) 
@@ -338,7 +397,7 @@ class BarViewModel: ObservableObject {
             if error == nil {
                 print("guardo la imagen")
                 
-                // Ediatamos ahora el texto ya que la imagen tarda mas
+                // Editamos primero la imagen y ahora el texto ya que la imagen tarda mas
                 let db = Firestore.firestore()
                 let campos: [String:Any] = ["nombre":bar.nombre, "descripcion":bar.descripcion,
                                             "tipo":bar.tipo, "capacidad": bar.capacidad, "lat": bar.lat, "long": bar.long, "dirImagen": String(describing: directorio)]
@@ -360,6 +419,11 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Obtener las reservas de un bar
+    /// - Parameters:
+    ///   - idBar: id del bar a buscar sus reservas
+    ///   - completion: para saber si se ha hecho bien
     func obtenerReservasBar(idBar: String, completion: @escaping ([String:[Int:Int]]) -> Void){
         let db = Firestore.firestore()
         let date = Date()
@@ -397,6 +461,13 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Reservar una mesa
+    /// - Parameters:
+    ///   - tam: Tamaño de la mesa a reservar
+    ///   - miBar: Bar donde hacer la reserva
+    ///   - turno: turno donde hacer la reserva
+    /// - Returns: Para saber si existe hueco o no
     func reservaMesa(tam: Int, miBar: BarModel, turno: String) -> Bool{
         var bar = miBar
         
@@ -435,6 +506,9 @@ class BarViewModel: ObservableObject {
         return true
     }
     
+    
+    /// Para obtener los bares por subcadena
+    /// - Parameter nombreBuscado: subcadena buscada
     func obtenerBaresNombre(nombreBuscado: String){
         let db = Firestore.firestore()
         db.collection("bares").getDocuments() { (querySnapshot, err) in
@@ -475,6 +549,9 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Para obtener los bares por tipo
+    /// - Parameter tipo: tipo buscado
     func obtenerBaresTipo(tipo: String){
         let db = Firestore.firestore()
         db.collection("bares").whereField("tipo", isEqualTo: tipo)
@@ -512,10 +589,23 @@ class BarViewModel: ObservableObject {
         }
     }
     
+    
+    /// Distancia euclídea entre dos puntos
+    /// - Parameters:
+    ///   - latX: latitud del punto X
+    ///   - longX: longitud del punto X
+    ///   - latY: latitud del punto Y
+    ///   - longY: longitud del punto Y
+    /// - Returns: distancia
     func distanciaEntre(latX: Double, longX: Double, latY: Double, longY: Double) -> Double {
         return sqrt((latX - latY) * (latX - latY) + (longX - longY) * (longX - longY))
     }
     
+    
+    /// Para obtener los bares ordenados por cercanía al usuario
+    /// - Parameters:
+    ///   - userLat: latitud del usuario
+    ///   - userLong: longitud del usuario
     func obtenerBaresDistancia(userLat: Double, userLong: Double){
         let db = Firestore.firestore()
         db.collection("bares").getDocuments() { (querySnapshot, err) in

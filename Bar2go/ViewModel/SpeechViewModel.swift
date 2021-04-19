@@ -7,35 +7,44 @@
 
 import AVFoundation
 
-
+/// Clase para dictar el texto
 class SpeechViewModel: ObservableObject {
-    var synthesizer = AVSpeechSynthesizer()
-    var utterance: AVSpeechUtterance? = nil
+    var synthesizer = AVSpeechSynthesizer()  /// Objeto para hablar
+    var utterance: AVSpeechUtterance? = nil  /// Objeto que contiene las propiedades del texto a hablar
     
+    
+    /// Método para hablar
+    /// - Parameter speech: texto a decir
     func speak(speech: String){
+        // Establecemos las propiedades del Speech
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, mode: .default, options: .defaultToSpeaker)
             try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
         } catch {
-            print("audioSession properties weren't set because of an error.")
+            print("Error al establecer las propiedades del Speech")
         }
 
-        let utterance = AVSpeechUtterance(string: speech)
-        utterance.voice = AVSpeechSynthesisVoice(language: "es-ES")
+        // Establecemos el texto a decir
+        utterance = AVSpeechUtterance(string: speech)
+        // Establecemos el idioma
+        utterance!.voice = AVSpeechSynthesisVoice(language: "es-ES")
 
-        let synth = AVSpeechSynthesizer()
-        synth.speak(utterance)
+        // Hablamos
+        synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance!)
 
         do {
-            disableAVSession()
+            desactivaPropiedades()
         }
     }
     
-    private func disableAVSession() {
+    
+    /// Método para desactivar las propiedades del Speech
+    private func desactivaPropiedades() {
         do {
             try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
         } catch {
-            print("audioSession properties weren't disable.")
+            print("Error al desactivar las propiedades del speech")
         }
     }
 }

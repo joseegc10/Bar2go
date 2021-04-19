@@ -8,11 +8,13 @@
 import Foundation
 import CoreLocation
 
+
+/// Clase para obtener la localización del usuario
 class UserLocation: NSObject, ObservableObject, CLLocationManagerDelegate {
+    let manager = CLLocationManager()               /// Para establecer las propiedades de la ubicación
+    @Published var locations: CLLocation? = nil     /// Para almacenar la localización
     
-    let manager = CLLocationManager()
-    @Published var locations: CLLocation? = nil
-    
+    // Establacemos las propiedades de la ubicación
     override init() {
         super.init()
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -21,6 +23,11 @@ class UserLocation: NSObject, ObservableObject, CLLocationManagerDelegate {
         manager.startUpdatingLocation()
     }
     
+    
+    /// Almacenar la localización
+    /// - Parameters:
+    ///   - manager: propiedades de la localización
+    ///   - locations: array donde se encuentra la localización
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             guard let location = locations.first else { return }
             self.locations = location

@@ -18,6 +18,8 @@ struct BusquedaNombre: View {
     
     @Binding var barEditar: BarModel
     
+    @StateObject var speech: SpeechViewModel
+    
     var body: some View {
         ScrollView{
             VStack{
@@ -64,7 +66,7 @@ struct BusquedaNombre: View {
                 
                 Spacer()
                 
-                ListaBares(bares: bares, tipoBusqueda: .nombre, nombre: nombre, index: $index, barEditar: $barEditar)
+                ListaBares(bares: bares, tipoBusqueda: .nombre, nombre: nombre, index: $index, barEditar: $barEditar, speech: speech)
             }
         }
     }

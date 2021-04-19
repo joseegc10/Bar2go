@@ -7,11 +7,12 @@
 
 import Foundation
 
+/// Para almacenar una reserva
 struct ReservaModel: Identifiable {
-    var id: String
-    var idUser: String
-    var bar: BarModel
-    var tam: Int
-    var turno: String
-    var fecha: String
+    var id: String          /// Id de la reserva
+    var idUser: String      /// Id del usuario que ha hecho la reserva
+    var bar: BarModel       /// Bar donde se ha hecho la reserva
+    var tam: Int            /// Número de personas de la reserva
+    var turno: String       /// Turno de la reserva
+    var fecha: String       /// Fecha de la reserva
 }

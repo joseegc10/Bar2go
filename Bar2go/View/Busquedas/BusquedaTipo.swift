@@ -15,6 +15,8 @@ struct BusquedaTipo: View {
     
     @Binding var barEditar: BarModel
     
+    @StateObject var speech: SpeechViewModel
+    
     var body: some View {
         VStack{
             HStack {
@@ -28,7 +30,7 @@ struct BusquedaTipo: View {
             
             Spacer()
             
-            ListaBares(bares: bares, tipoBusqueda: .tipo, tipo: tipo, index: $index, barEditar: $barEditar)
+            ListaBares(bares: bares, tipoBusqueda: .tipo, tipo: tipo, index: $index, barEditar: $barEditar, speech: speech)
         }.onAppear{            
             bares.obtenerBaresTipo(tipo: tipo)
         }

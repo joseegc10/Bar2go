@@ -14,9 +14,11 @@ struct Home: View {
     var tipo: String? = nil
     @Binding var barEditar: BarModel
     
+    @StateObject var speech: SpeechViewModel
+    
     var body: some View {
         VStack{
-            ListaBares(bares: bares, index: $index, barEditar: $barEditar)
+            ListaBares(bares: bares, index: $index, barEditar: $barEditar, speech: speech)
         }
     }
 }

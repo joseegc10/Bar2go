@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
+/// Obtenida con la ayuda de Internet ya que se trata de la biblioteca UIKit y tiene una estructura muy fija
 struct ImagePicker: UIViewControllerRepresentable {
     
     @Binding var show : Bool

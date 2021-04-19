@@ -12,7 +12,9 @@ struct BaresUsuario: View {
     @Binding var index: String
     @Binding var barEditar: BarModel
     
+    @StateObject var speech: SpeechViewModel
+    
     var body: some View {
-        ListaBares(bares: bares, tipoBusqueda: .baresUsuario, index: $index, barEditar: $barEditar)
+        ListaBares(bares: bares, tipoBusqueda: .baresUsuario, index: $index, barEditar: $barEditar, speech: speech)
     }
 }

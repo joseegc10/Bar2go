@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Para almacenar los tipos de bar disponibles
 enum TipoBar: String, CaseIterable {
     case pasta = "Pasta"
     case pescado = "Pescado"

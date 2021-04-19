@@ -26,6 +26,8 @@ struct ContentView: View {
     
     @State var antiguoIndex: String = ""
     
+    @StateObject var speech = SpeechViewModel()
+    
     var body: some View {
         ZStack{
             Color("fondo").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -41,12 +43,12 @@ struct ContentView: View {
                                     self.hideKeyboard()
                                 }
                         case "home":
-                            Home(index: $index, barEditar: $barEditar)
+                            Home(index: $index, barEditar: $barEditar, speech: speech)
                                 .onAppear{
                                     antiguoIndex = "home"
                                 }
                         case "nombre":
-                            BusquedaNombre(index: $index, barEditar: $barEditar)
+                            BusquedaNombre(index: $index, barEditar: $barEditar, speech: speech)
                                 .onAppear{
                                     antiguoIndex = "nombre"
                                 }
@@ -54,12 +56,12 @@ struct ContentView: View {
                                     self.hideKeyboard()
                                 }
                         case "tipo":
-                            BusquedaTipo(index: $index, barEditar: $barEditar)
+                            BusquedaTipo(index: $index, barEditar: $barEditar, speech: speech)
                                 .onAppear{
                                     antiguoIndex = "tipo"
                                 }
                         case "cercania":
-                            BusquedaCercania(index: $index, barEditar: $barEditar)
+                            BusquedaCercania(index: $index, barEditar: $barEditar, speech: speech)
                                 .onAppear{
                                     antiguoIndex = "cercania"
                                 }
@@ -73,7 +75,7 @@ struct ContentView: View {
                             FormularioBar(bar: $barEditar, activeSheet: $activeSheet,
                                         index: $index, tipoFormulario: .editar, antiguoIndex: $antiguoIndex)
                         case "baresUsuario":
-                            BaresUsuario(index: $index, barEditar: $barEditar)
+                            BaresUsuario(index: $index, barEditar: $barEditar, speech: speech)
                                 .onAppear{
                                     antiguoIndex = "baresUsuario"
                                 }
@@ -86,6 +88,11 @@ struct ContentView: View {
                 .onAppear{
                     if (UserDefaults.standard.integer(forKey: "numPersonas")) == 0 {
                         index = "inicio"
+                    }
+                }
+                .onTapGesture {
+                    if speech.synthesizer.isSpeaking {
+                        speech.synthesizer.stopSpeaking(at: .immediate)
                     }
                 }
             } else if login.estado == .login {

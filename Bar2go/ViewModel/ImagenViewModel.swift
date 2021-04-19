@@ -8,14 +8,18 @@
 import Foundation
 import Firebase
 
+
+/// Clase para obtener la imagen desde Storage de Firebase
 class ImagenViewModel: ObservableObject {
-    @Published var data : Data? = nil
-    @Published var imageURL : String
+    @Published var data : Data? = nil   /// Imagen
+    @Published var imageURL : String    /// URL de la imagen
     
+    /// Almacenamos la dirección de la imagen
     init(imageURL: String) {
         self.imageURL = imageURL
     }
     
+    /// Obtenemos la imagen
     func load(){
         let storageImage = Storage.storage().reference(forURL: imageURL)
         storageImage.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
